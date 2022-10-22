@@ -1,5 +1,5 @@
 import os
-
+import torch
 import constants
 from data.StartingDataset import StartingDataset
 from networks.StartingNetwork import StartingNetwork
@@ -17,11 +17,15 @@ def main():
     print("Batch size:", constants.BATCH_SIZE)
 
     # Initalize dataset and model. Then train the model!
-    data_path = "train.csv" #TODO: make sure you have train.csv downloaded in your project! this assumes it is in the project's root directory (ie the same directory as main) but you can change this as you please
+    # This assumes that train.csv is in the same directory as this Python script.
+    # You might want to change this.
+    data_path = "train.csv"
 
+    # TODO: Training and validation dataset are the same.
     train_dataset = StartingDataset(data_path)
     val_dataset = StartingDataset(data_path)
     model = StartingNetwork()
+
     starting_train(
         train_dataset=train_dataset,
         val_dataset=val_dataset,
@@ -29,7 +33,6 @@ def main():
         hyperparameters=hyperparameters,
         n_eval=constants.N_EVAL,
     )
-
 
 if __name__ == "__main__":
     main()
