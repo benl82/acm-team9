@@ -19,7 +19,7 @@ def main():
     # Initalize dataset and model. Then train the model!
     # This assumes that train.csv is in the same directory as this Python script.
     # You might want to change this.
-    data_path = "train.csv"
+    data_path = "./train.csv"
 
     # TODO: Training and validation dataset are the same.
     train_dataset = StartingDataset(data_path)
