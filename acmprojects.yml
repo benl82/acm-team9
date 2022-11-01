@@ -1,4 +1,4 @@
-name: acmprojects
+name: acmproject
 channels:
   - pytorch
   - menpo
@@ -202,5 +202,5 @@ dependencies:
   - zlib=1.2.11=h6c3fc93_1014
   - zstd=1.5.2=h582d3a0_0
   - pip:
-    - tqdm==4.64.0
-prefix: /Users/edmond/opt/anaconda3/envs/acmprojects
+      - tqdm==4.64.0
+prefix: /Users/jacksonrobertsteele/opt/anaconda3/envs/acmproject
