@@ -8,13 +8,13 @@ class StartingDataset(torch.utils.data.Dataset):
     Bag of Words Dataset
     """
 
-    def __init__(self, data_path):
+    def __init__(self, df):
         '''
         data_path (str): path for the csv file that contains the data that you want to use
         '''
 
         # Preprocess the data. These are just library function calls so it's here for you
-        self.df = pd.read_csv(data_path)
+        self.df = df
         self.vectorizer = CountVectorizer(stop_words='english', max_df=0.99, min_df=0.005)
         self.sequences = self.vectorizer.fit_transform(self.df.question_text.tolist()) # matrix of word counts for each sample
         self.labels = self.df.target.tolist() # list of labels
