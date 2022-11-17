@@ -29,7 +29,7 @@ def main():
     # Thus if we get rid of all duplicates, we are left with only the validation data
     val_df = pd.concat([all_data_df, training_df]).drop_duplicates(keep=False)
     print("Loaded validation data")
-    # TODO: Training and validation dataset are the same.
+    
     train_dataset = StartingDataset(training_df)
     val_dataset = StartingDataset(val_df)
     model = StartingNetwork()

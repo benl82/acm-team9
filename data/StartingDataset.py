@@ -10,7 +10,7 @@ class StartingDataset(torch.utils.data.Dataset):
 
     def __init__(self, df):
         '''
-        data_path (str): path for the csv file that contains the data that you want to use
+        df (pd.Dataframe): the Dataframe we want to create a dataset with
         '''
 
         # Preprocess the data. These are just library function calls so it's here for you
